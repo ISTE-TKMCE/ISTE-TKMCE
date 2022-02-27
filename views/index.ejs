@@ -567,7 +567,7 @@ new Glide(".images", {
                     <div class="row content-font">
                         <div class="col-6 text-center my-auto">
                             <a href="/official-iste/#aboutus"><h6>About us</h6> </a>
-                            <a href="#"><h6>Contact</h6> </a>
+                            <a id="tempcont" href="#"><h6>Contact</h6> </a>
                             <a href="#"><h6>Terms & condition</h6>  </a>
                         </div>
                     
@@ -611,28 +611,29 @@ new Glide(".images", {
 
 <script>
 
-document.getElementById('imageSlider').style.display="none"; 
-const endpoint = `/img/previous`;
 
 
-fetch( endpoint,{
-     method:'POST'
-     } )
-    .then(response => response.json())
-    .then(data => renderImage(data))
-    .catch(err => console.log(err));
+const sendMailContent =()=>{
 
-const renderImage = (data)=>{
+    const payload = {
+        email: 'name',
+        message: 'message'
+    };
 
-    console.log(data)
+    var data = new FormData();
+    data.append( "json", JSON.stringify( payload ) );
 
+    fetch("/mail",
+    {
+        method: "POST",
+        body: data
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(data){ alert( JSON.stringify( data ) ) })
 
-    document.getElementById('loadingSvg').style.display = "none";
-    document.getElementById('imageSlider').style.display="flex"; 
-
-    
 }
 
+document.getElementById('tempcont').addEventListener("click", sendMailContent);
 </script>
 <script>
    

@@ -5,6 +5,7 @@ const morgan = require('morgan');
 
 //rourtes import
 const mainRoutes = require('./routes/main');
+const mailerRoutes = require('./routes/mailer');
 
 
 //server setup
@@ -19,6 +20,7 @@ app.use(express.urlencoded({extended : true}));
 
 //routes
 app.use('/',mainRoutes);
+app.use('/mail',mailerRoutes);
 
 
 //404
