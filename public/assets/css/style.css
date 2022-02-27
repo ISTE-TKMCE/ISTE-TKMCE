@@ -1,0 +1,939 @@
+html{
+    scroll-behavior: smooth;
+}
+.body{
+    overflow-x: hidden;
+    background-color: #E5E5E5;
+}
+.page-footer h6{
+    color: #ffffff;
+    
+    
+    text-align: start;
+}
+.nav-item{
+    z-index: 1;
+    
+}
+.navbar-toggler{
+
+    z-index: 1;
+    
+}
+.footer>.container{
+    height: max-content;
+}
+
+.heading-font{
+font-family: 'Lato', sans-serif;
+font-weight:bolder;
+}
+
+.content-font{
+    font-family: 'Crimson Pro', serif;
+
+}
+
+.fntsz-1{
+    font-size:clamp(40px, 41px,48px);
+}
+.fntsz-2{
+    font-size:clamp(34px, 35px,38px);
+}
+.fntsz-3{
+    font-size:clamp(21px, 22px,24px);
+}
+.fntsz-4{
+    font-size:clamp(19px, 20px,21px);
+}
+.fntsz-5{
+    font-size:clamp(16px, 17px, 18px);
+}
+.fntsz-6{
+    font-size:16px;
+}
+#member_img{
+    border-radius: 50%;
+}
+.crd:hover {
+    
+    box-shadow: none !important;
+    transition:all 0.6s;
+  }
+.footer-copyright{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+.page-footer button{
+    width: 30px;
+    height: 30px;
+}
+.page-footer h5
+{
+    color: #ffffff;
+}
+.page-footer{
+    font-family: serif;
+    height: 100%;
+    width: auto;
+    margin-top: 45px;
+    background: rgb(35, 20, 77);
+    
+}
+
+
+
+@media screen and (max-width:300px) {
+    #iste_logo{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        animation: Circle 12s linear infinite;
+        width: 200px;
+        height: 200px;
+        margin-left: -60px;
+        margin-top: 10px;
+        
+    }  
+    .navbar{
+   
+        background-color: rgba(47, 54, 106, 0.95);
+        border-bottom-left-radius: 150px 100px;
+        height: 100%;
+        width: 100%;
+        
+    }
+    /* .navbar-brand{
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        
+    } */
+    #brand{
+        margin-top: 9%;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        width: 55%;
+    } 
+    
+    .navbar-nav{
+        font-size: small;
+        position: relative;
+        margin-left: 10%;
+        /* margin-top: -260px; */
+    }
+    .crd{
+
+        height:350px;
+        border:1px solid transparent;
+
+        
+        /* height:320px; */
+        /* padding:5px !important;
+        padding-top:10px !important; */
+        z-index: 1;
+        color: black;
+        
+    }
+    
+    /* .image1{
+        
+        
+        margin-top: -5%;
+        
+        
+    } */
+    .container-fluid .row{
+        margin:auto;
+    }
+    .nav-item{
+        margin-left: 5px;
+        
+    }
+    .navbar-toggler{
+   
+        position: absolute;
+        
+        top: 15px;
+        right: 15px;
+        
+    }
+    #navbarNav{
+       
+        margin-left: 80%;
+    }
+    #gear{
+        display: none;
+    }
+    .design{
+        display: block;
+        position: absolute;
+        top: 37%;
+        left: 55%;
+        width: 22%;
+    }
+    div.a {
+    
+        position:absolute;
+        
+    }
+    div.b {
+    
+    
+        position:absolute;
+         
+    }
+    div.c {
+    
+    
+        position:absolute;
+       
+    } 
+    div.d {
+    
+    
+        position:absolute;
+         
+    }  
+    div.e {
+    
+    
+        position:absolute;
+         
+    }   
+    div.f {
+    
+    
+        position:absolute;
+          
+    }  
+    div.g {
+    
+    
+        position:absolute;
+        
+    }         
+    div.h {
+    
+    
+        position:absolute;
+         
+    }   
+    div.i {
+    
+    
+        position:absolute;
+         
+    }  
+    div.j {
+    
+    
+        position:absolute;
+         
+    } 
+    div.k {
+    
+    
+        position:absolute;
+         
+    } 
+    div.l {
+    
+    
+        position:absolute;
+        
+    }  
+    div.m {
+    
+    
+        position:absolute;
+       
+    }  
+}
+@media screen and (min-width:300px) and (max-width:600px) {
+    #iste_logo{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        animation: Circle 12s linear infinite;
+        width: 250px;
+        height: 250px;
+        margin-left: -60px;
+        margin-top: 10px;
+        
+    } 
+    #gear{
+        display: none;
+    } 
+    .navbar{
+   
+        background-color: rgba(47, 54, 106, 0.95);
+        border-bottom-left-radius: 150px 100px;
+        height: 100%;
+        width: 100%;
+        
+    }
+    /* .navbar-brand{
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        
+    } */
+    #brand{
+        margin-top: 15%;
+        margin-left: 25px;
+        margin-bottom: 10%;
+        width: 50%;
+    } 
+    
+    .navbar-nav{
+        font-size: small;
+        position: relative;
+        margin-left: 10%;
+        /* margin-top: -260px; */
+    }
+    .crd{
+
+        height:350px;
+        border:1px solid transparent;
+
+        
+        /* height:320px; */
+        /* padding:5px !important;
+        padding-top:10px !important; */
+        z-index: 1;
+        color: black;
+        
+    }
+    
+    /* .image1{
+        
+        
+        margin-top: -5%;
+        
+        
+    } */
+    .container-fluid .row{
+        margin:auto;
+    }
+    .nav-item{
+        margin-left: 5px;
+        
+    }
+    .navbar-toggler{
+   
+        position: absolute;
+        
+        top: 18px;
+        right: 18px;
+        
+    }
+    #navbarNav{
+       
+        margin-left: 80%;
+    }
+    
+    .design{
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 55%;
+        width: 22%;
+    }
+    div.a {
+    
+    
+        position:absolute;
+        
+    }
+    div.b {
+    
+    
+        position:absolute;
+         
+    }
+    div.c {
+    
+    
+        position:absolute;
+       
+    } 
+    div.d {
+    
+    
+        position:absolute;
+         
+    }  
+    div.e {
+    
+    
+        position:absolute;
+         
+    }   
+    div.f {
+    
+    
+        position:absolute;
+          
+    }  
+    div.g {
+    
+    
+        position:absolute;
+        
+    }         
+    div.h {
+    
+    
+        position:absolute;
+         
+    }   
+    div.i {
+    
+    
+        position:absolute;
+         
+    }  
+    div.j {
+    
+    
+        position:absolute;
+         
+    } 
+    div.k {
+    
+    
+        position:absolute;
+         
+    } 
+    div.l {
+    
+    
+        position:absolute;
+        
+    }  
+    div.m {
+    
+    
+        position:absolute;
+       
+    }  
+}
+
+@media screen and (min-width:600px) and (max-width:992px) {
+    #iste_logo{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        animation: Circle 12s linear infinite;
+        width: 500px;
+        height: 500px;
+        margin-left: -80px;
+        margin-top: 10px;
+        
+    }  
+    #gear{
+        display: none;
+    }
+    .navbar{
+   
+        background-color: rgba(47, 54, 106, 0.95);
+        border-bottom-left-radius: 150px 100px;
+        height: 100%;
+        width: 100%;
+        
+    }
+    /* .navbar-brand{
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        
+    } */
+    #brand{
+        margin-top: 11%;
+        margin-left: 7%;
+        margin-bottom: 10%;
+        width: 50%;
+    } 
+    
+    .navbar-nav{
+        font-size: small;
+        position: relative;
+        margin-left: 10%;
+        /* margin-top: -260px; */
+    }
+    .crd{
+
+        height:350px;
+        border:1px solid transparent;
+
+        
+        /* height:320px; */
+        /* padding:5px !important;
+        padding-top:10px !important; */
+        z-index: 1;
+        color: black;
+        
+    }
+    
+    /* .image1{
+        
+        
+        margin-top: -5%;
+        
+        
+    } */
+    .container-fluid .row{
+        margin:auto;
+    }
+    .nav-item{
+        margin-left: 5px;
+        
+    }
+    .navbar-toggler{
+   
+        position: absolute;
+        
+        top: 20px;
+        right: 20px;
+        
+    }
+    #navbarNav{
+       
+        margin-left: 80%;
+    }
+    .design{
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        width: 22%;
+    }
+    div.a {
+    
+    
+        position:absolute;
+        
+    }
+    div.b {
+    
+    
+        position:absolute;
+         
+    }
+    div.c {
+    
+    
+        position:absolute;
+       
+    } 
+    div.d {
+    
+    
+        position:absolute;
+         
+    }  
+    div.e {
+    
+    
+        position:absolute;
+         
+    }   
+    div.f {
+    
+    
+        position:absolute;
+          
+    }  
+    div.g {
+    
+    
+        position:absolute;
+        
+    }         
+    div.h {
+    
+    
+        position:absolute;
+         
+    }   
+    div.i {
+    
+    
+        position:absolute;
+         
+    }  
+    div.j {
+    
+    
+        position:absolute;
+         
+    } 
+    div.k {
+    
+    
+        position:absolute;
+         
+    } 
+    div.l {
+    
+    
+        position:absolute;
+        
+    }  
+    div.m {
+    
+    
+        position:absolute;
+       
+    }  
+}
+
+@keyframes Circle {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+@media screen and (min-width:1300px) and (max-width:2000px) {
+#iste_logo{
+    position: absolute;
+    top: 0;
+    
+    animation: Circle 12s linear 1s infinite;
+    width: 900px;
+    height: 900px;
+    margin-left: -140px;
+    margin-top: 10px;
+    
+}
+.crd{
+
+    height:350px;
+    border:1px solid transparent;
+
+    
+    /* height:320px; */
+    /* padding:5px !important;
+    padding-top:10px !important; */
+    z-index: 1;
+    color: black;
+    
+}
+
+nav{
+    height: max-content;
+}
+
+.navbar{
+  
+    background-color: rgba(47, 54, 106, 0.95);
+    border-bottom-left-radius: 300px 290px;
+    height: max-content;
+    width: 100%;
+}
+.navbar-brand{
+    position: relative;
+    margin-top: 10%;
+    margin-left: auto;
+    padding-left: 10%;
+    margin-bottom: 10%;
+   
+}
+#brand{
+    
+    width: 500px;
+} 
+div.a {
+    
+    
+    position:absolute;
+    
+}
+div.b {
+
+
+    position:absolute;
+     
+}
+div.c {
+
+
+    position:absolute;
+   
+} 
+div.d {
+
+
+    position:absolute;
+     
+}  
+div.e {
+
+
+    position:absolute;
+     
+}   
+div.f {
+
+
+    position:absolute;
+      
+}  
+div.g {
+
+
+    position:absolute;
+    
+}         
+div.h {
+
+
+    position:absolute;
+     
+}   
+div.i {
+
+
+    position:absolute;
+     
+}  
+div.j {
+
+
+    position:absolute;
+     
+} 
+div.k {
+
+
+    position:absolute;
+     
+} 
+div.l {
+
+
+    position:absolute;
+    
+}  
+div.m {
+
+
+    position:absolute;
+   
+}  
+    
+
+.navbar-nav{
+    font-size: large;
+        
+        position: absolute;
+        top: 5%;
+        left: 50%;
+}
+.image1{
+    margin-top: -7%;
+    
+    width: 10%;
+    padding-left: 0%;
+}
+
+.design{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 760px;
+    width: 22%;
+}
+.nav-item{
+    margin-left: 60px;
+}
+}
+@media screen and (min-width:992px) and (max-width:1300px){
+
+    #iste_logo{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        animation: Circle 12s linear infinite;
+        width: 696px;
+        height: 696px;
+        margin-left: -140px;
+        margin-top: 10px;
+        
+    }
+    
+    nav{
+        height: max-content;
+    }
+    
+    .navbar{
+   
+        background-color: rgba(47, 54, 106, 0.95);
+        border-bottom-left-radius: 400px 400px;
+        height: max-content;
+        width: 100%;
+    }
+    .navbar-brand{
+        position: relative;
+        margin-top: 16%;
+        margin-bottom: 5%;
+        left: -4%;
+        padding-left: 10%;
+        margin-bottom: 10%;
+       
+    }
+    #brand{
+        
+        width: 80%;
+        height: 50%;
+    } 
+    
+    
+    .navbar-nav{
+        font-size: large;
+        
+        position: absolute;
+        top: 5%;
+        left: 50%;
+    }
+    .image1{
+        margin-top: -7%;
+        
+        width: 10%;
+        padding-left: 0%;
+    }
+    
+    .design{
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 60%;
+        width: 5%;
+        height: 5%;
+    }
+    .nav-item{
+        margin-left: 30px;
+    }
+    
+    
+    
+      
+      
+    
+      .container {
+        padding: 2px 16px;
+      }
+    .imgh{
+        position: relative;
+        
+        
+       
+        
+    }
+   
+    div.a {
+    
+    
+        position:absolute;
+        top: 5px;
+        left: 5px;   
+    }
+    div.b {
+    
+    
+        position:absolute;
+        top: 95px;
+        left: 95px;   
+    }
+    div.c {
+    
+    
+        position:absolute;
+        top: 5px;
+        left: 95px;   
+    } 
+    div.d {
+    
+    
+        position:absolute;
+        top: 5px;
+        left: 275px;   
+    }  
+    div.e {
+    
+    
+        position:absolute;
+        top: 95px;
+        left: 275px;   
+    }   
+    div.f {
+    
+    
+        position:absolute;
+        top: 275px;
+        left: 95px;   
+    }  
+    div.g {
+    
+    
+        position:absolute;
+        top: 275px;
+        left: 185px;   
+    }         
+    div.h {
+    
+    
+        position:absolute;
+        top: 275px;
+        left: 275px;   
+    }   
+    div.i {
+    
+    
+        position:absolute;
+        top: 185px;
+        left: 5px;   
+    }  
+    div.j {
+    
+    
+        position:absolute;
+        top: 275px;
+        left: 5px;   
+    } 
+    div.k {
+    
+    
+        position:absolute;
+        top: 365px;
+        left: 5px;   
+    } 
+    div.l {
+    
+    
+        position:absolute;
+        top: 185px;
+        left: 95px;   
+    }  
+    div.m {
+    
+    
+        position:absolute;
+        top: 185px;
+        left: 185px;   
+    }  
+    .crd{
+
+        height: 450px;
+        border:1px solid transparent;
+
+        
+        /* height:320px; */
+        /* padding:5px !important;
+        padding-top:10px !important; */
+        z-index: 1;
+        color: black;
+        
+    }
+    
+}
