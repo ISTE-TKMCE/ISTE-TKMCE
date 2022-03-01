@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row
+{margin: 40px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.sty
+{
+    background-color: lightgray;
+    border-radius: 100px;
+}
+.h-three
+{
+    text-align: center;
+}
+
+.head2
+{
+    justify-content: center;
+}
+h1
+{
+    color: darkslateblue;
+    font-weight: bolder;
+    padding: 30px;
+}
+.img-block{
+    margin:8px;
+    padding-right: 20px;
+    padding-left:12px;
+}
+h4{
+    font-family: 'Roboto',sans-serif;
+    font-weight:bold;
+}
+
+@media only screen and (min-width: 1000px) {
+    
+    .ppl 
+    {
+        width: 50%;
+        margin-left: 25%;
+        
+    }
+}
