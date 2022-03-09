@@ -1,0 +1,132 @@
+<form method=""  >
+  <h6 id="warningText">..</h6>      
+
+
+  <div class="form-group">
+    <label class="sr-only" for="fname">your name</label>
+    <input
+      class="required form-control"
+      id="fname"
+      name="fname"
+      placeholder="Your Name"
+      type="text"
+      style="background-color: aliceblue"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label class="sr-only" for="contactEmail">Email</label>
+    <input
+      class="required form-control h5-email"
+      id="contactEmail"
+      name="contactEmail"
+      placeholder="Your Email"
+      type="text"
+      style="background-color: aliceblue"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label class="sr-only" for="comment">Message</label>
+    <textarea
+      class="required form-control"
+      id="comment"
+      name="comment"
+      placeholder="Message"
+      rows="5"
+      required
+    ></textarea>
+  </div>
+  <div class="text-center">
+    <button id="formButton" class="btn btn-accent mb-4 rounded-pill px-4 py-2" >
+      Send Message
+    </button>
+  </div>
+</div>
+
+
+
+<script>
+    
+    document.getElementById('warningText').style.display='none';
+
+    const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    validate=(name,email,messsage)=>{
+
+        if(name === '') return 1;
+        if(!validateEmail(email)) return 2;
+        if(messsage === '') return 3;
+
+    }
+
+
+  document
+    .getElementById("formButton")
+    .addEventListener("click", function(event){
+    event.preventDefault();
+
+    const warningText = document.getElementById('warningText');
+    warningText.style.display="none";
+
+    const nameFeild =  document.getElementById('fname');
+    const emailFeild =  document.getElementById('contactEmail');
+    const messageFeild =  document.getElementById('comment');
+
+    const button = document.getElementById("formButton");
+
+        switch(validate( nameFeild.value , emailFeild.value, messageFeild.value)) {
+        case 1:
+            // code block
+            warningText.innerText = "Name cannot be empty."
+            warningText.style.display='block';
+            break;
+        case 2:
+            // code block
+            warningText.innerText = "Please enter a valid email."
+            warningText.style.display='block';
+            break;
+        case 3:
+            // code block
+            warningText.innerText = "Message cannot be empty."
+            warningText.style.display='block';
+        break;
+
+        default:    
+
+            button.innerText = "Sending..";
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/mail', true);
+
+            //Send the proper header information along with the request
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() { // Call a function when the state changes.
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    // alert('message send');
+                    // Request finished. 
+                    button.innerText = "Message Send";
+                }
+            }
+            xhr.send(`name=${nameFeild.value}&email=${emailFeild.value}&message=${messageFeild.value}`);
+    }
+
+
+
+
+    },false);
+
+
+
+
+
+</script>

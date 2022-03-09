@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-   
-    <!-- <link rel="stylesheet" href="assets/css/glide.core.min.css.map"> -->
-    <script src="assets/js/glide.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Oswald:wght@600&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
-    
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,400&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
-    <title>Home</title>
-</head>
+<%- include('./partials/head.ejs') %>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -605,23 +586,7 @@
 
                         </a>
                         
-                    </div>
-                          
-        
-                                        
-                      
-                         
-        
-                            
-                        
-                          
-                      
-                        
-                       
-                      
-                        
-                    
-                    
+                    </div>  
                   </div>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.626941914508!2d76.62976341375429!3d8.91423039323287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd3036020df5%3A0xc3c1007e5232dc27!2sTKM%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1646122029530!5m2!1sen!2sin"width="600" frameborder="0" style="border:0; width: 100%; height: 290px;"allowfullscreen loading="lazy"></iframe>
            
@@ -630,29 +595,10 @@
         <div class="col-lg-8 mx-auto">
           
           <br><br>
-            <form method="post" action="">
-                
-              <div class="form-group">
-                <label class="sr-only" for="fname">your name</label>
-                <input class="required form-control" id="fname" name="fname" placeholder="Your Name" type="text" style="background-color: aliceblue;" required>
-              </div>
-              
-              <div class="form-group">
-                <label class="sr-only" for="contactEmail">Email</label>
-                <input class="required form-control h5-email" id="contactEmail" name="contactEmail" placeholder="Your Email" type="text" style="background-color: aliceblue;" required>
-              </div>
-            
-              <div class="form-group">
-                <label class="sr-only" for="comment">Message</label>
-                <textarea class="required form-control" id="comment" name="comment" placeholder="Message" rows="5" required></textarea>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-accent mb-4 rounded-pill px-4 py-2" type="submit">Send Message</button>  
-              </div>
-              
-            </form>
-          
-          
+          <!-- contact form  -->
+
+          <%- include('./partials/contactForm.ejs') %>
+
         
       </div>
     </div>
@@ -661,72 +607,12 @@
 </div>
 
 
-<!-- FOOTER-->
-<div class="footer mb-0"  style="width: fit-content;">
 
-  
-    
-    
-    <footer class="page-footer font-small  pt-4 text-center" style=" background-color:rgba(0, 0, 0, 0.5);">
 
-    
-        <div class="container">
-          
-          
-          <div class="row text-center">
-      
-            <div class="col-lg-8">
-      
-               <div class="container">
-                    <div class="row heading-font">
-                        <div class="col-6 text-center my-auto">
-                            <a href="/official-iste/#aboutus"><h6>About us</h6> </a>
-                            <a href="#"><h6>Contact</h6> </a>
-                            <a href="#"><h6>Terms & condition</h6>  </a>
-                        </div>
-                    
-                    
-                        <div class="col-6 text-center my-auto">
-                            
-                        <a href="https://www.facebook.com/istetkm"><h6><img src="assets/images/facebook.png" class="mx-4" alt=""> Facebook</h6></a> 
-                        <a href=" https://twitter.com/TkmceIste?t=zijuy6CS_5QQcTIehRGUrg&s=08"><h6><img src="assets/images/twitter.png" class="mx-4" alt=""> Twitter</h6></a> 
-                        <a href="https://www.instagram.com/iste_tkmce_/"><h6><img src="assets/images/instagram2.png" class="mx-4" alt="" width="25px" height="25px"> Instagram</h6></a>
-                        </div>
-                    </div>
-               </div>
-      
-            </div>
-           
-            <div class="col-lg-4">
-                <h5 class="heading-font mt-2 mb-3">Subscribe to our Newsletter</h5>
 
-             
-              <form class="form-group row">
-            
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control heading-font"  placeholder="email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-light heading-font" type="button">Button</button>
-                    </div>
-                  </div>
-                
-              </form>
-              <!-- <h6 class="heading-font mt-2 mb-3 mx-auto text-center">Subscription added</h6> -->
+<%- include('./partials/footer.ejs') %>
 
-            </div>
 
-            
-      
-          </div>
-          
-      
-        </div>
-        
-     
-</div>
-
-</footer>
-</div>
 <script>
    
     gsap.to('.card-a', {scrollTrigger:{
@@ -785,16 +671,6 @@
 
 
 </body>
-
-    
-
-
-    
-
-
-
-
-
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

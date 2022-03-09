@@ -10,21 +10,29 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendmail = (req, res) => {
-  const mailOptions = {
-    from: "support@istetkmce.in",
-    to: "aravindkrishnanparayil@gmail.com",
-    subject: "Sending Email using Node.js",
-    text: "That was easy!",
-  };
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-      res.json({ message: "message send" });
-    }
-  });
+  console.log(req);
+  console.log(req.body);  
+ 
+    const mailOptions = {
+      from: "support@istetkmce.in",
+      to: "aravindkrishnanparayil@gmail.com",
+      subject: "ISTE : Contact Form response",
+      text: `name : ${req.body.name} <br><br> email: ${req.body.email} <br><br> message:  ${req.body.message} <br><br>`,
+    };
+  
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
+
+  console.log('sending response')
+  res.json({ message: "message send" });
+
+
 };
 
 module.exports = {
