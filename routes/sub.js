@@ -8,7 +8,10 @@ router.post("/add", (req, res) => {
         email:req.body.email
     })
     .then(result => res.send("Subscription added" ))
-    .catch(err =>console.log(err))
+    .catch(err =>{
+        if(err.message=="Validation error"){
+            res.send("Already subscribed" );
+        }})
 
   
 });

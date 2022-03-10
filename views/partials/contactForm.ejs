@@ -114,7 +114,12 @@
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                     // alert('message send');
                     // Request finished. 
-                    button.innerText = "Message Send";
+                    warningText.innerText="Message send."
+                    nameFeild.value='';
+                    emailFeild.value='';
+                    messageFeild.value='';
+                    warningText.style.display="block";
+                    button.innerText = "Send Message";
                 }
             }
             xhr.send(`name=${nameFeild.value}&email=${emailFeild.value}&message=${messageFeild.value}`);
