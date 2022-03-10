@@ -1,18 +1,20 @@
+require('dotenv').config()
+const { append } = require("express/lib/response");
 const nodemailer = require("nodemailer");
 // mail Config
 const transporter = nodemailer.createTransport({
-    host: 'holy.herosite.pro',
+    host: process.env.MAIL_HOST,
     port: 465,
   auth: {
-    user: "support@istetkmce.in",
-    pass: "HGaS9b3RWsPE2am",
+    user: process.env.EMAILID,
+    pass: process.env.EMAILPASS,
   },
 });
 
 const sendmail = (req, res) => {
 
-  console.log(req);
-  console.log(req.body);  
+  console.log(process.env.M_HOST);
+
  
     const mailOptions = {
       from: "support@istetkmce.in",
