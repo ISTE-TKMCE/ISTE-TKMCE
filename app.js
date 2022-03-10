@@ -1,11 +1,13 @@
 const express  = require("express");
 const app = express();
-const db = require("./models");
 const morgan = require('morgan');
+const {sequelize} = require('./models');
 
 //rourtes import
 const mainRoutes = require('./routes/main');
 const mailerRoutes = require('./routes/mailer');
+const subRoutes = require('./routes/sub');
+
 
 
 //server setup
@@ -23,6 +25,7 @@ app.use(express.urlencoded({extended : true}));
 //routes
 app.use('/',mainRoutes);
 app.use('/mail',mailerRoutes);
+app.use('/sub',subRoutes);
 
 
 //404
@@ -31,7 +34,13 @@ app.use((req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log('app now listening for requests on port 3000');
-});
+
+async function main (){
+    await sequelize.sync();
+    app.listen(port, () => {
+        console.log('app now listening for requests on port 3000');
+    });
+}
+main();
+
 

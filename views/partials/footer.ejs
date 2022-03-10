@@ -4,7 +4,7 @@
   
     
     
-    <footer class="page-footer font-small  pt-4 text-center" style=" background-color:rgba(0, 0, 0, 0.5);">
+    <footer  class="page-footer font-small  pt-4 text-center" style=" background-color:rgba(0, 0, 0, 0.5);">
 
     
         <div class="container">
@@ -39,16 +39,16 @@
 
              
               <form class="form-group row">
-            
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control heading-font"  placeholder="email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <h6 id="warningText2" class="heading-font mt-2 mb-3 mx-auto text-center">Subscription added</h6>
+
+                <div id="subform" class="input-group mb-3">
+                    <input id="submail" type="text" class="form-control heading-font"  placeholder="email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-light heading-font" type="button">Button</button>
+                      <button id="formButton2" class="btn btn-outline-light heading-font" type="button">Subscribe</button>
                     </div>
-                  </div>
+                </div>
                 
               </form>
-              <!-- <h6 class="heading-font mt-2 mb-3 mx-auto text-center">Subscription added</h6> -->
 
             </div>
 
@@ -63,6 +63,70 @@
 </div>
 
 </footer>
+
+
+<script>
+    
+  document.getElementById('warningText2').style.display='none';
+
+
+
+document
+  .getElementById("formButton2")
+  .addEventListener("click", function(event){
+  event.preventDefault();
+
+  const warningText2 = document.getElementById('warningText2');
+  const emailFeild2 =  document.getElementById('submail');
+  const button2 = document.getElementById("formButton2");
+
+
+      const validate = (email) => {
+      return String(email)
+        .toLowerCase()
+        .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+      };
+
+
+      if(!validate(emailFeild2.value)){
+
+        warningText2.innerText = "Please enter a valid email."
+        warningText2.style.display='block';
+
+      }else{
+
+          warningText2.innerText = "....";
+
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", '/sub/add', true);
+
+          //Send the proper header information along with the request
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+          xhr.onreadystatechange = function() { // Call a function when the state changes.
+              if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                  // alert('message send');
+                  // Request finished. 
+                  warningText2.innerText = this.responseText;
+                  warningText2.style.display="block";
+                  document.getElementById('subform').style.display = "none";
+              }
+          }
+          xhr.send(`email=${emailFeild2.value}`);
+
+      }
+
+
+  },false);
+
+
+
+
+
+</script>
+
 
 
 </div>
