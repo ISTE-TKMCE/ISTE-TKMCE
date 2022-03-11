@@ -239,3 +239,56 @@ setInterval(function(){
     animateDivm()
 },200) 
 
+
+   
+gsap.to('.card-a', {scrollTrigger:{
+    trigger:'.card-a',
+    
+    toggleActions: "restart none none none"
+} , y: -50, opacity:1, duration: 1,})
+gsap.to('.card-b', {scrollTrigger:{
+    trigger:'.card-b',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.card-c', {scrollTrigger:{
+    trigger:'.card-c',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1})
+gsap.to('.card-d', {scrollTrigger:{
+    trigger:'.card-d',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('#aboutus', {scrollTrigger:{
+    trigger:'#aboutus',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('#gallery', {scrollTrigger:{
+    trigger:'#gallery',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.gallery', {scrollTrigger:{
+    trigger:'#gallery',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.footer>.container', {scrollTrigger:{
+    trigger:'.footer',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('#teamheading', {scrollTrigger:{
+    trigger:'#teamheading',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.team', {scrollTrigger:{
+    trigger:'#teamheading',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.team-small-device-only', {scrollTrigger:{
+    trigger:'#teamheading',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+gsap.to('.contact', {scrollTrigger:{
+    trigger:'.contact',
+    toggleActions: "restart none none none"
+}, y: -50, opacity:1, duration: 1,})
+
+

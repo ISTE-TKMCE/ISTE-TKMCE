@@ -5,7 +5,14 @@ html{
     overflow-x: hidden;
     background-color: #E5E5E5;
 }
+.dropdown-menu{
+    font-size: small;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    position: relative;
 
+}
 .page-footer h6{
     color: #ffffff;
     text-align: start;
@@ -285,21 +292,16 @@ font-weight:bolder;
     
     .navbar-nav{
         font-size: small;
-        position: relative;
-        margin-left: 10%;
+        
+        
         /* margin-top: -260px; */
     }
-    .crd{
+    
+    
 
-        height:350px;
-        border:1px solid transparent;
-
+    .card{
+        top: 25px;
         
-        /* height:320px; */
-        /* padding:5px !important;
-        padding-top:10px !important; */
-        z-index: 1;
-        color: black;
         
     }
     
@@ -313,10 +315,7 @@ font-weight:bolder;
     .container-fluid .row{
         margin:auto;
     }
-    .nav-item{
-        margin-left: 5px;
-        
-    }
+    
     .navbar-toggler{
    
         position: absolute;
@@ -325,10 +324,7 @@ font-weight:bolder;
         right: 18px;
         
     }
-    #navbarNav{
-       
-        margin-left: 80%;
-    }
+    
     
     .design{
         transform: scale(1.25);
