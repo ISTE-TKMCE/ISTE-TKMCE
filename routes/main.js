@@ -1,12 +1,9 @@
 const router = require("express").Router();
+const homecontroller = require("../controllers/homepage")
+const ignitecontroller = require("../controllers/ignite")
+router.get("/", homecontroller.homepage)
 
-router.get("/", (req, res) => {
-  res.render("index");
-});
-
-router.get("/ignite",(req,res,next)=>{
-  res.render("ignite")
-})
+router.get("/ignite", ignitecontroller.ignite)
 
 router.post("/sub", (req, res) => {
   res.json({ message: "message send" });

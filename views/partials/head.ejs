@@ -21,6 +21,9 @@
     
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <% if (PageTitle==="IGNITE") { %>
+        <link rel="stylesheet" href="assets/igniteassets/css/style.css">
+    <% } %>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,400&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title><%= PageTitle %></title>
 </head>
