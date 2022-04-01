@@ -2,8 +2,20 @@ const express  = require("express");
 const app = express();
 const morgan = require('morgan');
 const {sequelize} = require('./models');
-
-
+var session = require('express-session');
+var MySQLStore = require('express-mysql-session')(session);
+var options = {
+	host: process.env.DB_HOST,
+	
+	user: process.env.DB_USER,
+	password:  process.env.DB_PASSWORD,
+	database: process.env.DB_NAME,
+    
+};
+var sessionStore = new MySQLStore(options);
+app.use(session({
+    secret: 'Hey we are iste', resave: false, saveUninitialized: false,store: sessionStore
+}))
 //rourtes import
 const mainRoutes = require('./routes/main');
 const mailerRoutes = require('./routes/mailer');

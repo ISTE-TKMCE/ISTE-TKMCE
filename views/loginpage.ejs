@@ -1,0 +1,35 @@
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+<%- include('./partials/navbar.ejs') %>  
+<div class="container">
+    <h1>Log In Here</h1>
+    <form class="mt-4" method="post" action="/login">
+        <div class="form-group row mt-4">
+            <label for="Adminname" class="col-sm-2 col-form-label">Username</label>
+            <style>
+              .form-control{
+                color: black;
+              }
+            </style>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Adminname" name="username" />
+              
+            </div>
+          </div>
+          <div class="form-group row mt-4">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" placeholder="***********" id="inputPassword" name="password">
+            </div>
+          </div>
+        <button class="btn btn-primary mt-3" type="submit">Sign in</button>
+    </form>
+    <% if (invalid==true) { %>
+      <h2>Your details are invalid</h2>
+    <% } %>
+</div>
+
+
+        <%- include('./partials/footer.ejs') %>

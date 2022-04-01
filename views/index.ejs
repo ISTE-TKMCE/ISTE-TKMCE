@@ -149,13 +149,22 @@
       <div class="glide__track" data-glide-el="track">
           
           <ul class="glide__slides">
+            <% for(var i=0; i< events.length; i++) { %>
+                <li class="glide__slide <%- events[i].status %>"> 
+                    <img class="event1" src="<%- events[i].source %>" alt="">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">What An Idea Sirji</div>
+                        <p class="image__description">
+                            Date:
+                        </p>
+                    </div>
+                    </li>
+                    <% } %>
+              
               <li class="glide__slide m">
-                  <img src="assets/images/iste_tkmce_-20220129-0001.jpg" alt="">
-              </li>
-              <li class="glide__slide l">
                   <img src="assets/images/iste_tkmce_-20220129-0004.jpg" alt="">
               </li>
-              <li class="glide__slide">
+              <li class="glide__slide m">
                   <img src="assets/images/iste_tkmce_-20220129-0005.jpg" alt="">
               </li>
               <li class="glide__slide l">
