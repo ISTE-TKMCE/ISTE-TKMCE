@@ -1,6 +1,7 @@
 const express  = require("express");
 const app = express();
 const morgan = require('morgan');
+const multer= require('multer')
 const {sequelize} = require('./models');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
@@ -21,7 +22,15 @@ const mainRoutes = require('./routes/main');
 const mailerRoutes = require('./routes/mailer');
 const subRoutes = require('./routes/sub');
 
+const filestorage = multer.diskStorage({
+    destination: (req,file,cb)=>{
+        cb(null, 'public/assets/images')
+    },
+    filename: (req, file, cb)=>{ 
+        cb(null, file.originalname)
 
+    }
+})
 
 //server setup
 const port = process.env.PORT|| 3000;
@@ -33,6 +42,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.use(express.static('public'));
+app.use(multer({storage: filestorage}).single('image'))
 app.use(express.urlencoded({extended : true}));
 
 //routes

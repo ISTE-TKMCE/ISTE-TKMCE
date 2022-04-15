@@ -6,6 +6,12 @@ router.get("/", homecontroller.homepage)
 router.get("/login", admincontroller.loginpage)
 router.get("/ignite", ignitecontroller.ignite)
 router.post("/login", admincontroller.validator)
+router.get('/addevent', admincontroller.addevent)
+router.post('/addevent',admincontroller.EventAdd)
+router.get('/logout',async (req,res,next)=>{
+  req.session.destroy()
+  res.redirect('/')
+})
 router.post("/sub", (req, res) => {
   res.json({ message: "message send" });
 });

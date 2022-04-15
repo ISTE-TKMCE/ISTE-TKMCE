@@ -1,5 +1,6 @@
 
-const {sequelize, Admin} = require('../models');
+const bcrypt=require('bcryptjs')
+const {sequelize, Admin, Event} = require('../models');
 const loginpage=(req, res) => {
   res.render("loginpage", {PageTitle:"Login", invalid:false});
   };
@@ -9,17 +10,17 @@ const validator=(req,res,next)=>{
     password=req.body.password
     
     Admin.findAll({where: {name: username}}).then(async (user)=>{
-        if(user[0]!=null){
-        console.log(user[0].password)
+        if(user[0].name==='ISTE'){
+        
         bcrypt.compare(password, user[0].password).then((result)=>{
             if(result) {
                 req.session.user=user[0]
                 req.session.isLoggedIn=true
-                console.log(user[0].name)
+                
                 req.session.id=user[0].id
                 
                 req.session.username=user[0].name
-                return res.redirect('/')
+                return res.render('adminpage', {PageTitle:'Adminpage'})
             }
             else{
                 const isLoggedIn= req.session.isLoggedIn===true
@@ -36,7 +37,34 @@ const validator=(req,res,next)=>{
     })
 
 }
+const addevent=(req,res,next)=>{
+    if(req.session.username==='ISTE'){
+        res.render('addevent', {PageTitle: 'AddEvent'})
+    }
+    else{
+        res.send('<h2>Go away and login as admin</h2>')
+    }
+}
+const EventAdd=(req,res,next)=>{
+    if(req.session.username==='ISTE'){
+     
+        var location='assets/images/'+req.file.originalname
+        Event.create({
+            name: req.body.name,
+            date: req.body.date,
+            description: req.body.description,
+            active: true,
+            reglink: req.body.regform,
+            location: location
+        }).then(()=>res.redirect('/')).catch(err=>console.log(err))
+    }
+    else{
+        res.send('<h2>Go away</h2>')
+    }
+}
 module.exports = {
     loginpage: loginpage,
     validator: validator,
+    addevent: addevent,
+    EventAdd: EventAdd
   };
