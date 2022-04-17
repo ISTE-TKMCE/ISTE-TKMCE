@@ -150,13 +150,17 @@
           
           <ul class="glide__slides">
             <% for(var i=0; i< events.length; i++) { %>
-                <li class="glide__slide <%- events[i].status %>"> 
-                    <img class="event1" src="<%- events[i].source %>" alt="">
+                <li class="glide__slide <%- events[i].active %>"> 
+                    <img class="event1" src="<%- events[i].location %>" alt="">
                     <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">What An Idea Sirji</div>
+                        <div class="image__title"><%= events[i].name %></div>
+                        <div class="container">
                         <p class="image__description">
-                            Date:
+                            <%= events[i].description %>
+                            Date: <%= events[i].date %>
+                            <a href="<%- events[i].reglink %>">Registration Link</a> 
                         </p>
+                    </div>
                     </div>
                     </li>
                     <% } %>
@@ -246,7 +250,7 @@
        for(var i=0;i<=array1.length;i++){
         if(width<=800){
             
-            if(array1[i].classList[2]=='glide__slide--active' && array1[i].classList[1]=='m'){
+            if(array1[i].classList[2]=='glide__slide--active' && array1[i].classList[1]=='true'){
                 
                 setHeadingUp()
                 break  
@@ -255,7 +259,7 @@
             
         }
         else{
-            if(array1[i].classList[2]=='glide__slide--active' && array1[i].classList[1]=='m'){
+            if(array1[i].classList[2]=='glide__slide--active' && array1[i].classList[1]=='true'){
                 
                 setHeadingUp()
                 break 

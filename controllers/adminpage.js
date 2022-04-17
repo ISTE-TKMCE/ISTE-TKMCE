@@ -62,9 +62,24 @@ const EventAdd=(req,res,next)=>{
         res.send('<h2>Go away</h2>')
     }
 }
+const makeprevious=(req,res,next)=>{
+    Event.findOne({where: {name: req.body.name}}).then((event)=>{
+        event.active=false
+        event.save().then(res.redirect('/'))
+    }).catch(err=>console.log(err))
+}
+const deleteevent=(req,res,next)=>{
+    console.log(req.body.name)
+    Event.findOne({where: {name: req.body.name}}).then((event)=>{
+        Event.destroy({where: {id: event.id}}).then(()=>{res.redirect('/')})
+        }
+        ).catch(err=>console.log(err))
+}
 module.exports = {
     loginpage: loginpage,
     validator: validator,
     addevent: addevent,
-    EventAdd: EventAdd
+    EventAdd: EventAdd,
+    makeprevious: makeprevious,
+    deleteevent: deleteevent
   };

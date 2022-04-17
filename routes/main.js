@@ -8,6 +8,8 @@ router.get("/ignite", ignitecontroller.ignite)
 router.post("/login", admincontroller.validator)
 router.get('/addevent', admincontroller.addevent)
 router.post('/addevent',admincontroller.EventAdd)
+router.post('/makeprevious', admincontroller.makeprevious)
+router.post('/deletevent', admincontroller.deleteevent)
 router.get('/logout',async (req,res,next)=>{
   req.session.destroy()
   res.redirect('/')
