@@ -46,6 +46,7 @@ app.use(multer({storage: filestorage}).single('image'))
 app.use(express.urlencoded({extended : true}));
 
 //routes
+
 app.use('/',mainRoutes);
 app.use('/mail',mailerRoutes);
 app.use('/sub',subRoutes);

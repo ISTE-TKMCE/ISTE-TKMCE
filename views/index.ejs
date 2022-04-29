@@ -152,46 +152,25 @@
             <% for(var i=0; i< events.length; i++) { %>
                 <li class="glide__slide <%- events[i].active %>"> 
                     <img class="event1" src="<%- events[i].location %>" alt="">
+                    <% if(events[i].active) { %>
                     <div class="image__overlay image__overlay--primary">
                         <div class="image__title"><%= events[i].name %></div>
+                        <br>
                         <div class="container">
                         <p class="image__description">
                             <%= events[i].description %>
+                            <br>
                             Date: <%= events[i].date %>
-                            <a href="<%- events[i].reglink %>">Registration Link</a> 
+                            <br>
+                            <a href="https://<%- events[i].reglink %>"><button class="btn btn-danger">Registration Link</button></a> 
                         </p>
                     </div>
                     </div>
+                    <% } %>
                     </li>
                     <% } %>
               
-              <li class="glide__slide m">
-                  <img src="assets/images/iste_tkmce_-20220129-0004.jpg" alt="">
-              </li>
-              <li class="glide__slide m">
-                  <img src="assets/images/iste_tkmce_-20220129-0005.jpg" alt="">
-              </li>
-              <li class="glide__slide l">
-                  <img src="assets/images/iste_tkmce_-20220129-0008.jpg" alt="">
-              </li>
-              <li class="glide__slide l">
-                  <img src="assets/images/iste_tkmce_-20220129-0012.jpg" alt="">
-              </li>
-              <li class="glide__slide l">
-                <img src="assets/images/iste_tkmce_-20220129-0019.jpg" alt="">
-            </li>
-            <li class="glide__slide l">
-                <img src="assets/images/iste_tkmce_-20220129-0022.jpg" alt="">
-            </li>
-            <li class="glide__slide l">
-                <img src="assets/images/iste_tkmce_-20220129-0043.jpg" alt="">
-            </li>
-            <li class="glide__slide l">
-                <img src="assets/images/iste_tkmce_-20220129-0044.jpg" alt="">
-            </li>
-            <li class="glide__slide l">
-                <img src="assets/images/iste_tkmce_-20220129-0045.jpg" alt="">
-            </li>
+             
           </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">

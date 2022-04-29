@@ -1728,7 +1728,10 @@ border:none;
     font-size: 14px;
     line-height: 20px;
   }
-  
+  .dropdown-item:hover{
+      background-color: transparent;
+      color: #FFFFFF;
+  }
   .team_member .member_img .social_media{
     position: absolute;
     top: 5px;

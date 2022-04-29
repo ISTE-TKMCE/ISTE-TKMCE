@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse text-center" id="navbarNav">
                 
             <ul class="navbar-nav content-font">
-                <li class="nav-item active">
+                <li class="nav-item <%= PageTitle === 'ISTETKMCE' ? 'active' : '' %>">
                 <a class="nav-link" href="/">HOME</a>
                 </li>
                 <li class="nav-item">
@@ -24,16 +24,16 @@
                 <li class="nav-item">
                 <a class="nav-link" href="/#gallery">EVENTS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <%= PageTitle === 'IGNITE' ? 'active' : '' %>">
                     <a class="nav-link" href="/ignite">IGNITE</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown <%= PageTitle === 'Execom_21-22' ? 'active' : '' %>">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       EXECOM
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown" >
-                      <a class="dropdown-item" style="color: #D3D3D3;" href="/teams21-22">21-22</a>
-                      <a class="dropdown-item" style="color: #D3D3D3;" href="#">20-21</a>
+                      <a class="dropdown-item" style="color: #D3D3D3;" href="/execom21-22">21-22</a>
+                      
                       
                     </div>
                   </li>
